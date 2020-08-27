@@ -13,7 +13,7 @@ class NavBar extends React.Component {
                  : 
                 (<NavLink to='/login'>Log In</NavLink>)}
                 <br/>
-                <NavLink to='/logs'>LogContainer</NavLink>
+                <NavLink to='/organisms'>Organisms</NavLink>
             </div>
         )
     }

@@ -1,17 +1,18 @@
 import React from 'react';
-import Map from './Map'
+import GoogleMaps from './GoogleMaps'
 import NavBar from './NavBar'
 import { Route, withRouter, Switch } from 'react-router-dom'
 import Signup from './Signup'
 import Login from './Login'
-import LogContainer from './LogContainer'
+import OrganismsContainer from './OrganismsContainer'
+
 
 import './App.css';
 
 class App extends React.Component {
 
   state = {
-    user: null
+    user: null,
   }
 
   componentDidMount() {
@@ -30,7 +31,7 @@ class App extends React.Component {
       }
     }
 
-
+   
   signUpHandler = (userObj) => {
     console.log(userObj);
     fetch("http://localhost:3000/api/v1/users", {
@@ -82,11 +83,11 @@ logOutHandler = () => {
         <Switch>
           <Route path='/signup' render={() => <Signup user={this.state.user} submitHandler={this.signUpHandler}/>} />
           <Route path='/login' render={() => <Login user={this.state.user} submitHandler={this.loginHandler} /> } />
-          <Route path='/logs' render={() => <LogContainer user={this.state.user} /> } />
+          <Route path='/organisms' render={() => <OrganismsContainer user={this.state.user} /> } />
           <Route path ='/' render={() =>(
             <div>
               <h1>This is the APP component</h1>
-              <Map />
+              <GoogleMaps />
             </div>
           )}
           />
