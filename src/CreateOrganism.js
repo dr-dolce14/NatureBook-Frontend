@@ -33,7 +33,7 @@ class CreateOrganism extends React.Component {
 
         return (
             <form onSubmit={this.submitHandler}>
-                <h1>Sign up here!</h1>
+                <h1>What Organism Do You Want to Create?</h1>
                 <TextField id="outlined-basic" label="Enter The Organism's Category" variant="outlined" name="category" value={this.state.category} onChange={this.changeHandler} />
                 <br/>
                 <TextField id="outlined-basic" label="Enter The Organism's Common Name" variant="outlined" name="common_name" value={this.state.common_name} onChange={this.changeHandler} />
