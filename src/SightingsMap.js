@@ -45,10 +45,10 @@ function Map(props) {
                 console.log(sighting, "in onclick")
               setSelectedSighting(sighting);
             }}
-          //   icon={{
-          //     url: `/skateboarding.svg`,
-          //     scaledSize: new window.google.maps.Size(25, 25)
-          //   }}
+            // icon={{
+            //   url: `/mountains_icon-icons.com_59773.svg`,
+            //   scaledSize: new window.google.maps.Size(25, 25)
+            // }}
           />
         ))}
   
