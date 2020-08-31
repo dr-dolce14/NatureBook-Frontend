@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard(props) {
+export default function SightingCard(props) {
   const classes = useStyles();
 
   return (
@@ -27,20 +27,20 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={props.organism.image}
-          title="Representative Organism"
+          image={"https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg"}
+          title="Representative Habitat"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {props.organism.common_name}
+            {props.sighting.location}
           </Typography>
           <br/>
           <Typography variant="body2" color="textSecondary" component="p">
-           Group: {props.organism.category}
+           Habitat: {props.sighting.habitat}
           </Typography>
           <br />
           <Typography variant="body2" color="textSecondary" component="p">
-            Scientific name: {props.organism.scientific_name}
+            Weather: {props.sighting.weather}
           </Typography>
         </CardContent>
       </CardActionArea>

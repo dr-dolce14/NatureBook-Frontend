@@ -34,7 +34,29 @@ class CreateOrganism extends React.Component {
         return (
             <form onSubmit={this.submitHandler}>
                 <h1>What Organism Do You Want to Create?</h1>
-                <TextField id="outlined-basic" label="Enter The Organism's Category" variant="outlined" name="category" value={this.state.category} onChange={this.changeHandler} />
+                {/* <TextField id="outlined-basic" label="Enter The Organism's Category" variant="outlined" name="category" value={this.state.category} onChange={this.changeHandler} /> */}
+                <>
+                <select
+                name = 'category'
+                onChange={ (e) => 
+                this.setState (
+                    {
+                       category: e.target.value,
+                },
+                console.log(e.target.value)
+                )
+            }>
+                <option value='' disabled selected hidden>
+                    Choose a category to which this organism belongs:
+                </option>
+               <option name='Amphibian' value='Amphibian'>Amphibian</option>
+               <option name='Reptile' value='Reptile'>Reptile</option>
+               <option name='Mammal' value='Mammal'>Mammal</option>
+               <option name='Bird' value='Bird'>Bird</option>
+               <option name='Insect' value='Insect'>Insect</option>
+            </select>
+                 </>           
+                <br/>
                 <br/>
                 <TextField id="outlined-basic" label="Enter The Organism's Common Name" variant="outlined" name="common_name" value={this.state.common_name} onChange={this.changeHandler} />
                 <br/>

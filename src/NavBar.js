@@ -8,6 +8,8 @@ class NavBar extends React.Component {
             <div>
                 <NavLink to='/signup'>Sign Up</NavLink>
                 <br/>
+                <NavLink to='/sightings'>See Sightings</NavLink>
+                <br/>
                 {this.props.user ? (<NavLink to='/login' onClick={this.props.clickHandler}>Log Out</NavLink>)
                   
                  : 

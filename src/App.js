@@ -5,6 +5,7 @@ import { Route, withRouter, Switch } from 'react-router-dom'
 import Signup from './Signup'
 import Login from './Login'
 import OrganismsContainer from './OrganismsContainer'
+import SightingsContainer from './SightingsContainer'
 
 
 import './App.css';
@@ -84,6 +85,7 @@ logOutHandler = () => {
           <Route path='/signup' render={() => <Signup user={this.state.user} submitHandler={this.signUpHandler}/>} />
           <Route path='/login' render={() => <Login user={this.state.user} submitHandler={this.loginHandler} /> } />
           <Route path='/organisms' render={() => <OrganismsContainer user={this.state.user} /> } />
+          <Route path='/sightings' render={() => <SightingsContainer user={this.state.user} /> } />
           <Route path ='/' render={() =>(
             <div>
               <h1>This is the APP component</h1>
