@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import SightingCard from './SightingCard';
+import CreateComment from './CreateComment'
+import {Route, Switch, withRouter, Redirect, NavLink, Link } from 'react-router-dom'
+// import CommentContainer from './CommentContainer'
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -30,7 +32,7 @@ export default function TransitionsModal(props) {
   const handleClose = () => {
     setOpen(false);
   };
-
+  console.log(props, "hey proppy rops")
   return (
     <div>
       <button type="button" onClick={handleOpen}>
@@ -58,9 +60,11 @@ export default function TransitionsModal(props) {
             {props.sighting.comments.map(comment => 
             <p id="transition-modal-description" key={comment.id}>{comment.content}</p> )}
             </>
+          <NavLink to={{pathname: `/comments/create/${props.sighting.id}`, dataProps:{props}}} exact >Create a Comment</NavLink> 
           </div>
         </Fade>
       </Modal>
+      
     </div>
   );
 }
