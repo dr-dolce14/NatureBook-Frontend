@@ -37,30 +37,30 @@ class UpdateSighting extends React.Component {
         })
     }
 
-    updateSighting = (sightingObj) => {
-        console.log(sightingObj)
-        fetch(`http://localhost:3000/api/v1/sightings/${sightingObj.sighting_id}`, {
-            method: "PATCH",
-            header: {
-                "content-type": "application/json",
-                "accept": "application/json"
-            },
-            body: JSON.stringify({
-                user_id: sightingObj.user_id,
-                sighting_id: sightingObj.sighting_id,
-                organism_id: sightingObj.organism_id,
-                location: sightingObj.location,
-                lat: sightingObj.lat,
-                lng: sightingObj.lng,
-                habitat: sightingObj.habitat,
-                weather: sightingObj.weather,
-                date: sightingObj.date
+    // updateSighting = (sightingObj) => {
+    //     console.log(sightingObj)
+    //     fetch(`http://localhost:3000/api/v1/sightings/${sightingObj.sighting_id}`, {
+    //         method: "PATCH",
+    //         header: {
+    //             "content-type": "application/json",
+    //             "accept": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             user_id: sightingObj.user_id,
+    //             sighting_id: sightingObj.sighting_id,
+    //             organism_id: sightingObj.organism_id,
+    //             location: sightingObj.location,
+    //             lat: sightingObj.lat,
+    //             lng: sightingObj.lng,
+    //             habitat: sightingObj.habitat,
+    //             weather: sightingObj.weather,
+    //             date: sightingObj.date
 
-             })
-        })
-        .then(resp => resp.json())
-        .then(sightObj => this.props.renderNewSighting(sightObj))
-        }
+    //          })
+    //     })
+    //     .then(resp => resp.json())
+    //     .then(sightObj => this.props.renderNewSighting(sightObj))
+    //     }
 
         changeHandler = (e) => {
             this.setState({
@@ -71,7 +71,8 @@ class UpdateSighting extends React.Component {
        sightingSubmitHandler = (e) => {
            console.log(this.props, this.state)
            e.preventDefault()
-            const newSighting = ( {
+           
+            this.setState ( {
             sighting_id: this.state.sighting_id,
             user_id: this.props.user.id,
             organism_id: this.state.organism_id,
@@ -81,10 +82,10 @@ class UpdateSighting extends React.Component {
             habitat: this.state.habitat,
             weather: this.state.weather,
             date: this.state.date
-           })
+           }, () => {this.props.updateSighting(this.state)})
            
-           console.log(this.state)
-           this.updateSighting(newSighting)
+        //    console.log(this.state)
+        //    this.props.updateSighting(this.state)
        }
 
     render () {
@@ -99,7 +100,7 @@ class UpdateSighting extends React.Component {
                 onChange={ (e) => 
                 this.setState (
                     {
-                        organism_id: e.target.value,
+                        organism_id: parseInt(e.target.value),
                 },
                 console.log(e.target.value)
                 )

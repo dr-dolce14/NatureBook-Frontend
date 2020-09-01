@@ -34,6 +34,8 @@ class CreateOrganism extends React.Component {
         return (
             <form onSubmit={this.submitHandler}>
                 <h1>What Organism Do You Want to Create?</h1>
+                <a target="_blank" href="https://speciesclassification.westus2.cloudapp.azure.com/">Link to Microsoft Species Classification Resource</a>
+                <br/>
                 {/* <TextField id="outlined-basic" label="Enter The Organism's Category" variant="outlined" name="category" value={this.state.category} onChange={this.changeHandler} /> */}
                 <>
                 <select

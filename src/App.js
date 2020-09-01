@@ -88,7 +88,8 @@ logOutHandler = () => {
           <Route path='/sightings' render={() => <SightingsContainer user={this.state.user} /> } />
           <Route path ='/' render={() =>(
             <div>
-              <h1>This is the APP component</h1>
+              <h1>Welcome to NatureBook!</h1>
+              
               <GoogleMaps />
             </div>
           )}
