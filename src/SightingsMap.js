@@ -34,7 +34,7 @@ function Map(props) {
       >
       
         {props.data.sightings.map(sighting => (
-            console.log(sighting, "im sighting"),
+            // console.log(sighting, "im sighting"),
           <Marker
             key={sighting.id}
             position={{

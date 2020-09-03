@@ -7,6 +7,7 @@ import Login from './Login'
 import OrganismsContainer from './OrganismsContainer'
 import SightingsContainer from './SightingsContainer'
 import CommentsContainer from './CommentsContainer'
+import Profile from './Profile'
 
 
 import './App.css';
@@ -88,6 +89,7 @@ logOutHandler = () => {
           <Route path='/organisms' render={() => <OrganismsContainer user={this.state.user} /> } />
           <Route path='/sightings' render={() => <SightingsContainer user={this.state.user} /> } />
           <Route path='/comments' render={() => <CommentsContainer user={this.state.user} />} />
+          <Route path='/profile' render={() => <Profile user={this.state.user} />} />
           <Route path ='/' render={() =>(
             <div>
               <h1>Welcome to NatureBook!</h1>

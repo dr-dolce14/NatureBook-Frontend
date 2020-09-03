@@ -8,13 +8,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box'
+import OrganismModal from './OrganismModal'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 375,
   },
   media: {
-    height: 140,
+    height: 275,
   },
 });
 
@@ -27,7 +28,7 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={props.organism.image}
+          image={props.organism.image} 
           title="Representative Organism"
         />
         <CardContent>
@@ -35,13 +36,13 @@ export default function MediaCard(props) {
             {props.organism.common_name}
           </Typography>
           <br/>
-          <Typography variant="body2" color="textSecondary" component="p">
+          {/* <Typography variant="body2" color="textSecondary" component="p">
            Group: {props.organism.category}
           </Typography>
           <br />
           <Typography variant="body2" color="textSecondary" component="p">
             Scientific name: {props.organism.scientific_name}
-          </Typography>
+          </Typography> */}
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -51,6 +52,7 @@ export default function MediaCard(props) {
         {/* <Button size="small" color="primary">
           Learn More
         </Button> */}
+        <OrganismModal organism={props.organism}/>
       </CardActions>
     </Card>
     </Box>
