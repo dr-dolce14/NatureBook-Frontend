@@ -141,9 +141,11 @@ class SightingsContainer extends React.Component {
                         <>
                         <h1>All NatureBook Sightings</h1>
                         <SearchSightings searchValue={this.state.searchValue} searchHandler={this.searchHandler}/>
-                        <NavLink to='/sightings/map'>Sightings Map</NavLink>
-                        <br />
+                       
+                        {/* <NavLink to='/sightings/map'>Sightings Map</NavLink>
+                        <br /> */}
                         <NavLink to='/sightings/create'>Create Your Own Sighting!</NavLink>
+                        <SightingsMap sightings={this.searchingSightings()} />
                         {this.renderSightings()}
                         </>
                     } />

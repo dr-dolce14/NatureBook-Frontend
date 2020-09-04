@@ -63,8 +63,10 @@ function Map(props) {
             }}
           >
             <div>
-              <h2>{selectedSighting.location}</h2>
-              <p>{selectedSighting.habitat}</p>
+              <h2>Location: {selectedSighting.location}</h2>
+              <p>Habitat: {selectedSighting.habitat}</p>
+              <p>Organism: {selectedSighting.organism.common_name}</p>
+              <img alt='' src={selectedSighting.organism.image} width={'250px'} height={'200px'}/>
             </div>
           </InfoWindow>
         )}
@@ -77,14 +79,14 @@ function Map(props) {
   export default function SightingsMap(props) {
       //console.log(props, "where am i props")
     return (
-      <div style={{ width: "100vw", height: "100vh" }}>
+      <div style={{ width: "100vw", height: "70vh" }}>
         <MapWrapped
             data = {props}
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
             process.env.REACT_APP_API_KEY
           }`}
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
+          containerElement={<div style={{ height: `500px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>
