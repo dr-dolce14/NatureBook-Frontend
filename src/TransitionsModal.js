@@ -5,7 +5,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import CreateComment from './CreateComment'
 import {Route, Switch, withRouter, Redirect, NavLink, Link } from 'react-router-dom'
-// import CommentContainer from './CommentContainer'
+import CommentCard from './CommentCard'
+import CommentsContainer from './CommentsContainer'
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -55,12 +56,13 @@ export default function TransitionsModal(props) {
             <h2 id="transition-modal-title">Location: {props.sighting.location}</h2>
             <img alt="" src={props.sighting.organism.image} width={'600px'} height={'400px'}/>
             <br/>
-            <h4>Comments:</h4>
+            {/* <h4>Comments:</h4> */}
             <>
-            {props.sighting.comments.map(comment => 
-            <p id="transition-modal-description" key={comment.id}>{comment.content}</p> )}
+            {/* {props.sighting.comments.map(comment => 
+            <p id="transition-modal-description" key={comment.id}>{comment.content}</p> )} */}
+            <CommentsContainer sighting={props.sighting} user={props.user.user}/>
             </>
-          <NavLink to={{pathname: `/comments/create/${props.sighting.id}`, dataProps:{props}}} exact >Create a Comment</NavLink> 
+          {/* <NavLink to={{pathname: `/comments/create/${props.sighting.id}`, dataProps:{props}}} exact >Create a Comment</NavLink>  */}
           </div>
         </Fade>
       </Modal>

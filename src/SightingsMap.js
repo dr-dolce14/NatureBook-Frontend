@@ -5,6 +5,7 @@ import Geocode from 'react-geocode'
 import AutoComplete from 'react-google-autocomplete';
 
 
+
 import './App.css';
 
 import { Descriptions } from 'antd';
@@ -35,7 +36,9 @@ function Map(props) {
       
         {props.data.sightings.map(sighting => (
             // console.log(sighting, "im sighting"),
+            
           <Marker
+          
             key={sighting.id}
             position={{
               lat: sighting.lat,
@@ -45,11 +48,14 @@ function Map(props) {
                 console.log(sighting, "in onclick")
               setSelectedSighting(sighting);
             }}
+         
             // icon={{
-            //   url: `/mountains_icon-icons.com_59773.svg`,
+            //   url: `src/logo.svg`,
             //   scaledSize: new window.google.maps.Size(25, 25)
             // }}
           />
+    
+          
         ))}
   
         {selectedSighting && (

@@ -53,7 +53,7 @@ export default function OrganismModal(props) {
         <Fade in={open}>
           <div className={classes.paper}>
             <h2 id="transition-modal-title"> {props.organism.common_name}</h2>
-            <img alt="" src={props.organism.image} width={'600px'} height={'400px'}/>
+            <img alt="" src={props.organism.image} width={'500px'} height={'400px'}/>
             <br/>
             <h3>Scientific Name: {props.organism.scientific_name}</h3>
             <h4>Type of Organism: {props.organism.category}</h4>

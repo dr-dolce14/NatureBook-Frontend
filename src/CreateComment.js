@@ -11,7 +11,8 @@ class CreateComment extends React.Component {
 
     state = {
         user_id: this.props.user.id,
-        sighting_id: this.props.data.location.dataProps.props.sighting.id,
+        sighting_id: this.props.data.sighting.id,
+        // sighting_id: this.props.data.location.dataProps.props.sighting.id,
         content: ""
     }
 
@@ -28,7 +29,13 @@ class CreateComment extends React.Component {
             body: JSON.stringify({ comment: commentObj}),
         })
         .then(resp => resp.json())
-        .then(newComment => this.props.submitHandler(newComment))
+        .then(newComment => this.props.submitHandler(newComment))  
+        this.setState({user_id: this.props.user.id,
+            sighting_id: this.props.data.sighting.id,
+            // sighting_id: this.props.data.location.dataProps.props.sighting.id,
+            content: ""
+
+        })   
     }
 
     changeHandler = (e) => {
@@ -42,7 +49,7 @@ class CreateComment extends React.Component {
        e.preventDefault()
        const newComment = {
         user_id: this.props.user.id,
-        sighting_id: this.props.data.location.dataProps.props.sighting.id,
+        sighting_id: this.props.data.sighting.id,
         content: this.state.content
        }
        console.log(newComment)
@@ -58,6 +65,7 @@ class CreateComment extends React.Component {
             <TextField id="outlined-basic" label="Your comment here" variant="outlined" name="content" value={this.state.content} onChange={this.changeHandler} />
             <br/>
             <Button variant='contained' color='primary' type="submit" name="submit" value="Post your comment!">Post your comment!</Button>
+            
             </form>
         )
     }

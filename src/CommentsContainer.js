@@ -12,14 +12,23 @@ class CommentsContainer extends React.Component {
         fetch('http://localhost:3000/api/v1/comments')
         .then(resp => resp.json())
         .then(data => this.setState({ comments: data }))
+        // .then(data => console.log(data))
+    }
+
+    sightingComments = () => {
+        return this.state.comments.filter(commentObj => commentObj.sighting.id === this.props.sighting.id)
     }
 
     renderComments = () => {
-        return this.state.comments.map((commentObj) => <CommentCard key={commentObj.id} comment={commentObj} user={this.props.user} /> )
+            return this.sightingComments().map((commentObj, index) => <CommentCard key={index} comment={commentObj} />)
     }
 
+    // renderComments = () => {
+    //     return this.state.comments.map((commentObj, index) => <CommentCard key={index} comment={commentObj} /> )
+    // }
+
     createCommentsHandler = (commentObj) => {
-        console.log(commentObj, this.state.user)
+        console.log(commentObj, this.props.user)
         this.setState({
             comments: [...this.state.comments, commentObj] }, () =>
             this.props.history.push('/sightings')
@@ -30,18 +39,25 @@ class CommentsContainer extends React.Component {
 
     render () {
         console.log(this.state.comments)
+        console.log(this.props)
 
         return (
             <div>
-            <Switch>
+
+                <h1>Comments:</h1>
+                {this.renderComments()}
+                {/* <CreateComment user={this.props.user} data={this.props} submitHandler={this.createCommentHandler} /> */}
+                <CreateComment user={this.props.user} data={this.props} submitHandler={this.createCommentsHandler} />
+           {/* <Switch>
             <Route path='/comments/create' render={() => <CreateComment user={this.props.user} data={this.props} submitHandler={this.createCommentsHandler} />}/>
             <Route path='/comments' render={() => 
             <>
-            <h1>This is the COMMENT CONTAINER</h1>
+            <h1>Comments:</h1>
             {this.renderComments()}
             </>
             } />
-            </Switch>
+          </Switch>
+            </div> */}
             </div>
         )
     }

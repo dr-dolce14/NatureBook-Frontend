@@ -83,7 +83,7 @@ export default function SightingCard(props) {
             variant="contained" size="small" color="primary">
             Update
         </Button>
-        <TransitionsModal sighting={props.sighting}/>
+        <TransitionsModal sighting={props.sighting} user={props.user}/>
       </CardActions>
     </Card>
     </Box>
