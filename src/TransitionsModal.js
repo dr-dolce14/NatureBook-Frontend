@@ -54,7 +54,7 @@ export default function TransitionsModal(props) {
         <Fade in={open}>
           <div className={classes.paper}>
             <h2 id="transition-modal-title">Location: {props.sighting.location}</h2>
-            <img alt="" src={props.sighting.organism.image} width={'600px'} height={'400px'}/>
+            <img alt="" src={props.sighting.organism.image} width={'250px'} height={'200px'}/>
             <br/>
             {/* <h4>Comments:</h4> */}
             <>

@@ -14,15 +14,25 @@ import TransitionsModal from './TransitionsModal'
 import { NavLink, Route, withRouter, Switch } from 'react-router-dom'
 
 
-
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      width: 400,
+      height: "100%"
     },
     media: {
-      height: 140,
+      height: 100,
+      width: 400
+    
     },
   });
+// const useStyles = makeStyles({
+//     root: {
+//       maxWidth: 345,
+//     },
+//     media: {
+//       height: 140,
+//     },
+//   });
 
 
 
@@ -33,7 +43,8 @@ export default function SightingCard(props) {
  
 // console.log(props)
   return (
-    <Box m={2} pt={3}>
+      <div className="container">
+    <Box m={2} pt={3} className="item">
     <Card className={classes.root} >
       <CardActionArea >
         <CardMedia
@@ -43,7 +54,9 @@ export default function SightingCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" >
-           {props.sighting.location} 
+           User: {props.sighting.user.username}
+           <br/>
+           Location: {props.sighting.location} 
           </Typography>
           <br/>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -87,5 +100,6 @@ export default function SightingCard(props) {
       </CardActions>
     </Card>
     </Box>
+    </div>
   );
 }

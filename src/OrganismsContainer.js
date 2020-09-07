@@ -52,8 +52,8 @@ class OrganismsContainer extends React.Component {
             <Route path='/organisms' render={() => 
                 <>
                 <h1>Organisms</h1>
-                <NavLink to='/organisms/create'>Create Your Own Organism!</NavLink>
-                {this.renderOrganisms()}
+                <div><NavLink to='/organisms/create'>Create Your Own Organism!</NavLink></div>
+                <div>{this.renderOrganisms()}</div>
                 </>
             } />
             </Switch>)

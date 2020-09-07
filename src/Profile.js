@@ -117,30 +117,42 @@ class Profile extends React.Component {
             <br/>
             <h2>Badge Levels:</h2>
             <br/>
-            <h4>Amphibians:</h4>
-            <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faFrog} size="2x" color="green"/> </p>
-            <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faFrog} size="3x" color="blue"/> </p>
-            <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faFrog} size="5x" color="orange"/> </p>
+            <div className="container">
+                <div className="item">
+                    <h4 >Amphibians:</h4>
+                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faFrog} size="2x" color="green"/> </p>
+                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faFrog} size="3x" color="blue"/> </p>
+                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faFrog} size="5x" color="orange"/> </p>
+                </div>
             <br/>
-            <h4>Reptiles:</h4>
-            <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faDragon} size="2x" color="green"/> </p>
-            <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faDragon} size="3x" color="blue"/> </p>
-            <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faDragon} size="5x" color="orange"/> </p>
+                <div className="item">
+                    <h4>Reptiles:</h4>
+                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faDragon} size="2x" color="green"/> </p>
+                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faDragon} size="3x" color="blue"/> </p>
+                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faDragon} size="5x" color="orange"/> </p>
+                </div>
             <br/>
-            <h4>Birds:</h4>
-            <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faCrow} size="2x" color="green"/> </p>
-            <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faCrow} size="3x" color="blue"/> </p>
-            <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faCrow} size="5x" color="orange"/> </p>
+                <div className="item">
+                    <h4>Birds:</h4>
+                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faCrow} size="2x" color="green"/> </p>
+                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faCrow} size="3x" color="blue"/> </p>
+                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faCrow} size="5x" color="orange"/> </p>
+                </div>
             <br/>
-            <h4>Mammals:</h4>
-            <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faPaw} size="2x" color="green"/> </p>
-            <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faPaw} size="3x" color="blue"/> </p>
-            <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faPaw} size="5x" color="orange"/> </p>     
+                <div className="item">
+                    <h4>Mammals:</h4>
+                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faPaw} size="2x" color="green"/> </p>
+                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faPaw} size="3x" color="blue"/> </p>
+                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faPaw} size="5x" color="orange"/> </p>    
+                </div> 
             <br/>
-            <h4>Insects:</h4>
-            <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faBug} size="2x" color="green"/> </p>
-            <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faBug} size="3x" color="blue"/> </p>
-            <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faBug} size="5x" color="orange"/> </p>
+                <div className="item">
+                   <h4>Insects:</h4>
+                   <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faBug} size="2x" color="green"/> </p>
+                   <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faBug} size="3x" color="blue"/> </p>
+                   <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faBug} size="5x" color="orange"/> </p>
+                </div>
+            </div>
             <br/>   
             <h2>My Badges:</h2>
             <h4>Amphibians: {this.calculateAmphibians()}</h4>

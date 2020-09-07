@@ -9,13 +9,17 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box'
 import OrganismModal from './OrganismModal'
+import { Grid, Paper} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 375,
+    width: 400,
+    height: "100%"
   },
   media: {
-    height: 275,
+    height: 250,
+    width: 400
+  
   },
 });
 
@@ -23,8 +27,10 @@ export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
-    <Box m={2} pt={3}>
+    <div className="container" >
+    <Box m={5} pt={5} className="item">
     <Card className={classes.root}>
+    
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -56,5 +62,6 @@ export default function MediaCard(props) {
       </CardActions>
     </Card>
     </Box>
+    </div>
   );
 }
