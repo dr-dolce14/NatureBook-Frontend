@@ -32,9 +32,13 @@ class CreateOrganism extends React.Component {
     render() {
 
         return (
+            <>
+            <div style={{ width:'600px', marginTop:'20px'}}>
+            <h3><a target="_blank" href="https://speciesclassification.westus2.cloudapp.azure.com/">Link to Microsoft Species Classification Resource</a></h3>
+            <br/>
             <form onSubmit={this.submitHandler}>
-                <h1>What Organism Do You Want to Create?</h1>
-                <a target="_blank" href="https://speciesclassification.westus2.cloudapp.azure.com/">Link to Microsoft Species Classification Resource</a>
+                <h1>What Organism Do You Want to Add?</h1>
+                
                 <br/>
                 {/* <TextField id="outlined-basic" label="Enter The Organism's Category" variant="outlined" name="category" value={this.state.category} onChange={this.changeHandler} /> */}
                 <>
@@ -60,15 +64,21 @@ class CreateOrganism extends React.Component {
                  </>           
                 <br/>
                 <br/>
-                <TextField id="outlined-basic" label="Enter The Organism's Common Name" variant="outlined" name="common_name" value={this.state.common_name} onChange={this.changeHandler} />
+                <TextField label="Enter The Organism's Common Name" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="common_name" value={this.state.common_name} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Enter The Organism's Scientific Name" variant="outlined" name="scientific_name"  value={this.state.scientific_name} onChange={this.changeHandler} />
+                <TextField label="Enter The Organism's Scientific Name" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="scientific_name"  value={this.state.scientific_name} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Enter an Image Url" variant="outlined" name="image"  value={this.state.image} onChange={this.changeHandler} />
+                <TextField label="Enter an Image Url" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="image"  value={this.state.image} onChange={this.changeHandler} />
                 <br/>
                 <Button variant='contained' color='primary' type="submit" name="submit" value="Create Your Organism!">Create Your Organism!</Button>
 
             </form>
+            </div>
+            <br/>
+            <div className="create-organism">
+
+            </div>
+            </>
         )
     }
 }

@@ -51,8 +51,8 @@ class OrganismsContainer extends React.Component {
             <Route path='/organisms/create' render={() => <CreateOrganism submitHandler={this.createHandler} />}/>
             <Route path='/organisms' render={() => 
                 <>
-                <h1>Organisms</h1>
-                <div><NavLink to='/organisms/create'>Create Your Own Organism!</NavLink></div>
+                <h1>NatureBook Field Guide</h1>
+                <h2><NavLink to='/organisms/create'>Add an Organism to the NatureBook Field Guide!</NavLink></h2>
                 <div>{this.renderOrganisms()}</div>
                 </>
             } />

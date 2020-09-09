@@ -88,6 +88,8 @@ class CreateSighting extends React.Component {
     render() {
 
         return (
+            <>
+            <div style={{ width:'600px', marginTop:'20px'}}>
             <form onSubmit={this.sightingSubmitHandler}>
                 <h1>Give us some info on what you saw and where you saw it</h1>
                 <>
@@ -114,21 +116,27 @@ class CreateSighting extends React.Component {
             </select>
                  </>           
                 <br/>
-                <TextField id="outlined-basic" label="Brief description of location where the organism was found" variant="outlined" name="location" value={this.state.location} onChange={this.changeHandler} />
+                <TextField  label="Brief description of location where the organism was found" style={{ margin: 20 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="location" value={this.state.location} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Latitude of location" variant="outlined" name="lat"  value={this.state.lat} onChange={this.changeHandler} />
+                <TextField  label="Latitude of location" style={{ margin: 20 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="lat"  value={this.state.lat} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Longitude of location" variant="outlined" name="lng"  value={this.state.lng} onChange={this.changeHandler} />
+                <TextField label="Longitude of location" style={{ margin: 20 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="lng" value={this.state.lng} onChange={this.changeHandler} />
                 <br />
-                <TextField id="outlined-basic" label="Brief description of the habitat" variant="outlined" name="habitat"  value={this.state.habitat} onChange={this.changeHandler} />
+                <TextField label="Brief description of the habitat" style={{ margin: 20 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="habitat" value={this.state.habitat} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Brief description of the weather" variant="outlined" name="weather"  value={this.state.weather} onChange={this.changeHandler} />
+                <TextField label="Brief description of the weather" style={{ margin: 20 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="weather" value={this.state.weather} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Date and time of sighting" variant="outlined" name="date"  value={this.state.date} onChange={this.changeHandler} />
+                <TextField label="Date and time of sighting" style={{ margin: 20 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="date"  value={this.state.date} onChange={this.changeHandler} />
                 <br/>
                 <Button variant='contained' color='primary' type="submit" name="submit" value="Log your sighting!">Log Your Sighting!</Button>
 
             </form>
+            </div>
+            <br/>
+            <div className="create-sighting">
+
+            </div>
+            </>
         )
     }
 }

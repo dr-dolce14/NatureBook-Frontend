@@ -7,6 +7,7 @@ import CreateComment from './CreateComment'
 import {Route, Switch, withRouter, Redirect, NavLink, Link } from 'react-router-dom'
 import CommentCard from './CommentCard'
 import CommentsContainer from './CommentsContainer'
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -36,9 +37,9 @@ export default function TransitionsModal(props) {
   console.log(props, "hey proppy rops")
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
+      <Button variant="outlined"  id="button" onClick={handleOpen}>
         Expand
-      </button>
+      </Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

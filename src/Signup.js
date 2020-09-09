@@ -34,21 +34,29 @@ class Signup extends React.Component {
     render() {
 
         return (
+            <>
+            <div style={{ width:'600px', marginTop:'20px'}}>
             <form onSubmit={this.submitHandler}>
                 <h1>Sign up here!</h1>
-                <TextField id="outlined-basic" label="Enter Your First Name" variant="outlined" name="firstname" placeholder="Enter Your First Name" value={this.state.firstname} onChange={this.changeHandler} />
+                <TextField label="Enter Your First Name" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="firstname" value={this.state.firstname} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Enter Your Last Name" variant="outlined" name="lastname" placeholder="Enter Your Last Name" value={this.state.lastname} onChange={this.changeHandler} />
+                <TextField label="Enter Your Last Name" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="lastname" value={this.state.lastname} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Enter A Username" variant="outlined" name="username" placeholder="Enter A Username" value={this.state.username} onChange={this.changeHandler} />
+                <TextField label="Enter A Username" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="username" value={this.state.username} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Enter A Password" variant="outlined" name="password" placeholder="Enter a Password" value={this.state.password} onChange={this.changeHandler} />
+                <TextField label="Enter A Password" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="password" value={this.state.password} type='password' onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Profile Pic url" variant="outlined" name="pic" placeholder="Enter a Url for a profile pic" value={this.state.pic} onChange={this.changeHandler} />
+                <TextField label="Profile Pic url" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="pic" value={this.state.pic} onChange={this.changeHandler} />
                 <br/>
                 <Button variant='contained' color='primary' type="submit" name="submit" value="Create Your Profile!">Create Your Profile!</Button>
 
             </form>
+            </div>
+            <br/>
+            <div className="signup">
+
+            </div>
+            </>
         )
     }
 }

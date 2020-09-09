@@ -29,14 +29,23 @@ class Login extends React.Component {
     render() {
 
         return (
+            <>
+            
+            <div style={{ width:'600px', marginTop:'20px'}}>
             <form onSubmit={this.submitHandler}>
                 <h1>Login</h1>
-                <TextField id="outlined-basic" label="Enter Your Username" variant="outlined" name="username" placeholder="Enter A Username" value={this.state.username} onChange={this.changeHandler} />
+                <TextField label="Enter Your Username" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="username"  value={this.state.username} onChange={this.changeHandler} />
                 <br/>
-                <TextField id="outlined-basic" label="Enter Your Password" variant="outlined" name="password" placeholder="Enter a Password" value={this.state.password} onChange={this.changeHandler} />
+                <TextField label="Enter Your Password" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="password"  type="password" value={this.state.password} onChange={this.changeHandler} />
                 <br/>
                 <Button variant='contained' color='primary' type="submit" name="submit" value="Login">Log In</Button> 
             </form>
+            </div>
+            <br/>
+            <div className="login">
+
+            </div>
+            </>
         )
     }
 }

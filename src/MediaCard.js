@@ -14,7 +14,8 @@ import { Grid, Paper} from "@material-ui/core";
 const useStyles = makeStyles({
   root: {
     width: 400,
-    height: "100%"
+    height: "100%",
+    backgroundColor: "#BDB76B"
   },
   media: {
     height: 250,

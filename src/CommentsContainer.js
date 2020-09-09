@@ -44,7 +44,7 @@ class CommentsContainer extends React.Component {
         return (
             <div>
 
-                <h1>Comments:</h1>
+                <h2 id="comments">Comments:</h2>
                 {this.renderComments()}
                 {/* <CreateComment user={this.props.user} data={this.props} submitHandler={this.createCommentHandler} /> */}
                 <CreateComment user={this.props.user} data={this.props} submitHandler={this.createCommentsHandler} />

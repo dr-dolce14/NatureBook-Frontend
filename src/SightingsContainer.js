@@ -144,7 +144,9 @@ class SightingsContainer extends React.Component {
                        
                         {/* <NavLink to='/sightings/map'>Sightings Map</NavLink>
                         <br /> */}
-                        <NavLink to='/sightings/create'>Create Your Own Sighting!</NavLink>
+                       <br/>
+                        <h2><NavLink to='/sightings/create'>Create Your Own Sighting!</NavLink></h2>
+                        
                         <SightingsMap sightings={this.searchingSightings()} />
                         {this.renderSightings()}
                         </>

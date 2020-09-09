@@ -60,13 +60,15 @@ class CreateComment extends React.Component {
         
 // console.log(this.props.data.location.dataProps.props.sighting)
         return (
+            <div style={{ width:'400px', marginTop:'20px'}}>
             <form onSubmit={this.commentSubmitHandler}>
-            <h1>Comment on this sighting:</h1>
-            <TextField id="outlined-basic" label="Your comment here" variant="outlined" name="content" value={this.state.content} onChange={this.changeHandler} />
+            <h3 id="comments">Comment on this sighting:</h3>
+            <TextField  label="Your comment here" style={{ margin: 10 }}  fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="content" value={this.state.content} onChange={this.changeHandler} />
             <br/>
             <Button variant='contained' color='primary' type="submit" name="submit" value="Post your comment!">Post your comment!</Button>
             
             </form>
+            </div>
         )
     }
 }

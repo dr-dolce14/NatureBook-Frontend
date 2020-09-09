@@ -17,7 +17,8 @@ import { NavLink, Route, withRouter, Switch } from 'react-router-dom'
 const useStyles = makeStyles({
     root: {
       width: 400,
-      height: "100%"
+      height: "100%",
+      backgroundColor: "#D3D3D3"
     },
     media: {
       height: 100,

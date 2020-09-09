@@ -9,7 +9,7 @@
 html,
 body
  {
-    background-color:#F5DEB3;
+    background-color: #D3D3D3;
     color: #606060;
     font-family: 'Lato', sans-serif;
     font-weight: 150;
@@ -49,7 +49,7 @@ h3 {
     margin-bottom: 15px;
 } 
 
-h2:after {
+/* h2:after {
     display: block;
     height: 2px;
     background-color: #b9e63d;
@@ -57,7 +57,7 @@ h2:after {
     width: 100px;
     margin: 0 auto;
     margin-top: 30px;
-}
+} */
 
 h4 {
     font-weight: 200;
@@ -100,3 +100,99 @@ background-color: #BDB76B;
 
 }
 
+#badges {
+    outline: 2px dashed blue;
+}
+
+#profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#center {
+    margin-left: 600px;
+}
+
+#button {
+    background-color: #D3D3D3;
+}
+
+header {
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/babyFox.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./img/babyFox.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/babyFox.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    background-attachment: fixed;
+}
+
+
+.hero-text-box {
+    position: sticky;
+    width: 1140px;
+    top: 100%;
+    left: 100%;
+    right: 100%;
+    -webkit-transform: translate(25%, 25%);
+        -ms-transform: translate(25%, 25%);
+            transform: translate(25%, 25%);
+
+
+}
+
+.row {
+    max-width: 1140px;
+    margin-top: 0 auto;
+}
+
+.login {
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/kingfisher.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./img/kingfisher.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/kingfisher.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 50vh;
+    background-attachment: scroll;
+}
+
+.create-organism {
+    background-image: -o-linear-gradient(rgba(26, 24, 24, 0.7), rgba(20, 19, 19, 0.7)), url(./img/orchidmantis.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 18, 18, 0.7)), to(rgba(10, 9, 9, 0.7))), url(./img/orchidmantis.jpg);
+    background-image: linear-gradient(rgba(114, 143, 120, 0.7), rgba(29, 31, 29, 0.7)), url(./img/orchidmantis.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 50vh;
+    background-attachment: scroll;
+}
+
+.create-sighting {
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/bushviper.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./img/bushviper.jpg);
+    background-image: linear-gradient(rgba(86, 117, 113, 0.7), rgba(135, 185, 170, 0.7)), url(./img/bushviper.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 50vh;
+    background-attachment: scroll;
+}
+
+.signup {
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/redeyedtreefrog.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./img/redeyedtreefrog.jpg);
+    background-image: linear-gradient(rgba(61, 70, 68, 0.7), rgba(135, 185, 170, 0.7)), url(./img/redeyedtreefrog.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 50vh;
+    background-attachment: scroll;
+}
+
+#record {
+    text-align: center;
+}
+
+#comments {
+    color: #006400;
+    text-align: left;
+}

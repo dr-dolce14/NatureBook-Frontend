@@ -112,56 +112,74 @@ class Profile extends React.Component {
             <div>
 
             <h1>{this.props.user.username}</h1>
+            <h2>Name: {this.props.user.firstname} {this.props.user.lastname}</h2>
             <br />
-            <img alt="" src={this.props.user.pic} width={'600px'} height={'400px'}/>
+            <img id="profile" alt="" src={this.props.user.pic} width={'600px'} height={'400px'}/>
             <br/>
-            <h2>Badge Levels:</h2>
-            <br/>
-            <div className="container">
+            
+            <div >
+                <div>
+                <h2>Badge Levels:</h2>
+                    <h4 id="record">Beginner: 1-3 organisms found, Junior: 4-6 organisms found, Senior: more than 7 organisms found</h4>
+      
+                </div>
+                
+                {/* <div className="item">
+                    <h2>Junior: 4-6 organisms found</h2>
+                </div>
+            
                 <div className="item">
-                    <h4 >Amphibians:</h4>
-                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faFrog} size="2x" color="green"/> </p>
-                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faFrog} size="3x" color="blue"/> </p>
-                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faFrog} size="5x" color="orange"/> </p>
+                    <h2>Senior: more than 7 organisms found</h2>
+                </div> */}
+                
+            </div>
+            <div className="container" id="center">
+                <div className="item" id="badges">
+                    <h2>Amphibians:</h2>
+                    <p>Beginner  <FontAwesomeIcon icon={faFrog} size="2x" color="green"/> </p>
+                    <p>Junior  <FontAwesomeIcon icon={faFrog} size="3x" color="blue"/> </p>
+                    <p>Senior  <FontAwesomeIcon icon={faFrog} size="5x" color="orange"/> </p>
                 </div>
             <br/>
-                <div className="item">
-                    <h4>Reptiles:</h4>
-                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faDragon} size="2x" color="green"/> </p>
-                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faDragon} size="3x" color="blue"/> </p>
-                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faDragon} size="5x" color="orange"/> </p>
+                <div className="item" id="badges">
+                    <h2>Reptiles:</h2>
+                    <p>Beginner  <FontAwesomeIcon icon={faDragon} size="2x" color="green"/> </p>
+                    <p>Junior  <FontAwesomeIcon icon={faDragon} size="3x" color="blue"/> </p>
+                    <p>Senior  <FontAwesomeIcon icon={faDragon} size="5x" color="orange"/> </p>
                 </div>
             <br/>
-                <div className="item">
-                    <h4>Birds:</h4>
-                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faCrow} size="2x" color="green"/> </p>
-                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faCrow} size="3x" color="blue"/> </p>
-                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faCrow} size="5x" color="orange"/> </p>
+                <div className="item" id="badges">
+                    <h2>Birds:</h2>
+                    <p>Beginner  <FontAwesomeIcon icon={faCrow} size="2x" color="green"/> </p>
+                    <p>Junior  <FontAwesomeIcon icon={faCrow} size="3x" color="blue"/> </p>
+                    <p>Senior  <FontAwesomeIcon icon={faCrow} size="5x" color="orange"/> </p>
                 </div>
             <br/>
-                <div className="item">
-                    <h4>Mammals:</h4>
-                    <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faPaw} size="2x" color="green"/> </p>
-                    <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faPaw} size="3x" color="blue"/> </p>
-                    <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faPaw} size="5x" color="orange"/> </p>    
+                <div className="item" id="badges">
+                    <h2>Mammals:</h2>
+                    <p>Beginner  <FontAwesomeIcon icon={faPaw} size="2x" color="green"/> </p>
+                    <p>Junior  <FontAwesomeIcon icon={faPaw} size="3x" color="blue"/> </p>
+                    <p>Senior  <FontAwesomeIcon icon={faPaw} size="5x" color="orange"/> </p>    
                 </div> 
             <br/>
-                <div className="item">
-                   <h4>Insects:</h4>
-                   <p>Beginner (1-3 organisms found): <FontAwesomeIcon icon={faBug} size="2x" color="green"/> </p>
-                   <p>Junior (4-6 organisms found): <FontAwesomeIcon icon={faBug} size="3x" color="blue"/> </p>
-                   <p>Senior (more than 7 organisms found): <FontAwesomeIcon icon={faBug} size="5x" color="orange"/> </p>
+                <div className="item" id="badges">
+                   <h2>Insects:</h2>
+                   <p>Beginner  <FontAwesomeIcon icon={faBug} size="2x" color="green"/> </p>
+                   <p>Junior  <FontAwesomeIcon icon={faBug} size="3x" color="blue"/> </p>
+                   <p>Senior  <FontAwesomeIcon icon={faBug} size="5x" color="orange"/> </p>
                 </div>
             </div>
-            <br/>   
+            <br/> 
+            <br></br>  
             <h2>My Badges:</h2>
-            <h4>Amphibians: {this.calculateAmphibians()}</h4>
-            <h4>Reptiles: {this.calculateReptiles()}</h4>
-            <h4>Birds: {this.calculateBirds()}</h4>
-            <h4>Insects: {this.calculateInsects()}</h4>
-            <h4>Mammals: {this.calculateMammals()}</h4>
+            <h2>Amphibians: {this.calculateAmphibians()}</h2>
+            <h2>Reptiles: {this.calculateReptiles()}</h2>
+            <h2>Birds: {this.calculateBirds()}</h2>
+            <h2>Insects: {this.calculateInsects()}</h2>
+            <h2>Mammals: {this.calculateMammals()}</h2>
             {/* {this.userSightings().map(sighting => <p key={sighting.id}>{sighting.organism.category}</p>)} */}
-            <h2>My Sightings:</h2>
+            <br/>
+            <h1>My Sightings:</h1>
             {this.renderUserSightings()}
             </div>
         )

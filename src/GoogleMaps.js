@@ -197,7 +197,10 @@ class GoogleMaps extends React.Component {
     return (
 
       <div style={{ padding: '1rem', margin: '0 auto', maxWidth: 1000 }}>
-        <h1>Map</h1>
+        <h2>Drag the marker around to find your latitude and longitude! Or put in your city and state to find your coordinates!</h2>
+        <h3 id="record">Once you have your coordinates, click on "Signup" to create a profile or "Login" if you already have a profile.</h3>
+        <h3 id="record">Then you can start adding organisms to the NatureBook Field Guide and recording your sightings!</h3>
+        <br />
       <Descriptions  bordered>
         <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
         <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>

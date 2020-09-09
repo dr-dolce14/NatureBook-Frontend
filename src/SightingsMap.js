@@ -92,7 +92,7 @@ function Map(props) {
             process.env.REACT_APP_API_KEY
           }`}
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `500px` }} />}
+          containerElement={<div style={{ height: `600px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>

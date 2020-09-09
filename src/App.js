@@ -8,6 +8,7 @@ import OrganismsContainer from './OrganismsContainer'
 import SightingsContainer from './SightingsContainer'
 import CommentsContainer from './CommentsContainer'
 import Profile from './Profile'
+import Header from './Header'
 
 
 import './App.css';
@@ -93,7 +94,8 @@ logOutHandler = () => {
           <Route path ='/' render={() =>(
             <div>
               <h1>Welcome to NatureBook!</h1>
-              
+              <h3 id="record">Keep a record of all the interesting wild organisms you see, whether around your neighborhood or on trips!</h3>
+              <Header />
               <GoogleMaps />
             </div>
           )}
