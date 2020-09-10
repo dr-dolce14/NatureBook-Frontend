@@ -70,7 +70,7 @@ class CreateOrganism extends React.Component {
                 <br/>
                 <TextField label="Enter an Image Url" style={{ margin: 20 }} fullWidth margin="normal" InputLabelProps={{ shrink: true }} name="image"  value={this.state.image} onChange={this.changeHandler} />
                 <br/>
-                <Button variant='contained' color='primary' type="submit" name="submit" value="Create Your Organism!">Create Your Organism!</Button>
+                <Button variant='contained' color='primary' type="submit" name="submit" value="Create Your Organism!">Add Your Organism!</Button>
 
             </form>
             </div>
